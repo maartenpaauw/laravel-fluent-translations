@@ -21,29 +21,28 @@ class CountTranslation implements TranslationContract
 
     public function exact(int $count, string $message): CountTranslation
     {
-        return new CountTranslation(array_merge(
-            $this->messages,
-            [new ExactCountMessage($count, $message)],
-        ));
+        return $this->merge(new ExactCountMessage($count, $message));
     }
 
     public function range(int $from, int $to, string $message): CountTranslation
     {
-        return new CountTranslation(array_merge(
-            $this->messages,
-            [new InRangeMessage($from, $to, $message)],
-        ));
+        return $this->merge(new InRangeMessage($from, $to, $message));
     }
 
     public function from(int $from, string $message): CountTranslation
     {
-        return new CountTranslation(array_merge(
-            $this->messages,
-            [new FromCountMessage($from, $message)],
-        ));
+        return $this->merge(new FromCountMessage($from, $message));
     }
 
-    public function __toString()
+    private function merge(CountAwareMessageContract $message): CountTranslation
+    {
+        return new CountTranslation([
+            ...$this->messages,
+            $message,
+        ]);
+    }
+
+    public function __toString(): string
     {
         return $this->toString();
     }

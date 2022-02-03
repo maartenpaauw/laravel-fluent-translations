@@ -2,6 +2,6 @@
 
 All notable changes to `laravel-fluent-translations` will be documented in this file.
 
-## 1.0.0 - 202X-XX-XX
+## v1.0.0 - 2022-02-03
 
 - initial release

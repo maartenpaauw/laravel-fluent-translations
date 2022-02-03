@@ -1,16 +1,16 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "maartenpaauw/laravel-fluent-translations",
+    "description": "This is my package laravel-fluent-translations",
     "keywords": [
-        ":vendor_name",
-        ":package_slug"
+        "maartenpaauw",
+        "laravel-fluent-translations"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/maartenpaauw/laravel-fluent-translations",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Maarten Paauw",
+            "email": "maartenpaauw@gmail.com",
             "role": "Developer"
         }
     ],
@@ -24,12 +24,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src"
+            "Maartenpaauw\\Translation\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Maartenpaauw\\Translation\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -38,7 +38,10 @@
         "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true

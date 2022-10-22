@@ -7,8 +7,8 @@ namespace Maartenpaauw\Translation;
 final class PluralTranslation implements TranslationContract
 {
     public function __construct(
-        private string $singular = '',
-        private string $plural = '',
+        private string $singular,
+        private string $plural,
     ) {
     }
 

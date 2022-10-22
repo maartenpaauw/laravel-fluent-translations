@@ -12,7 +12,7 @@ final class Translation
 {
     public static function singular(string $message): PluralTranslation
     {
-        return new PluralTranslation($message);
+        return new PluralTranslation($message, '');
     }
 
     public static function plural(string $message): PluralTranslation

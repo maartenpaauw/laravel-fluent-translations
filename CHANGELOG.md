@@ -7,6 +7,7 @@ All notable changes to `laravel-fluent-translations` will be documented in this 
 ### Changed
 
 - Marked all classes as final.
+- No default values for singular and plural translations.
 
 ## [v1.0.0] - 2022-02-03
 

@@ -8,7 +8,7 @@ use Maartenpaauw\Translation\Count\ExactCountMessage;
 use Maartenpaauw\Translation\Count\FromCountMessage;
 use Maartenpaauw\Translation\Count\InRangeMessage;
 
-class Translation
+final class Translation
 {
     public static function singular(string $message): PluralTranslation
     {

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Maartenpaauw\Translation\Count;
 
-class FromCountMessage implements CountAwareMessageContract
+final class FromCountMessage implements CountAwareMessageContract
 {
     public function __construct(
         private int $from,

@@ -9,10 +9,10 @@ use Maartenpaauw\Translation\Count\ExactCountMessage;
 use Maartenpaauw\Translation\Count\FromCountMessage;
 use Maartenpaauw\Translation\Count\InRangeMessage;
 
-class CountTranslation implements TranslationContract
+final class CountTranslation implements TranslationContract
 {
     /**
-     * @param  array<int, CountAwareMessageContract>  $messages
+     * @param array<array-key, CountAwareMessageContract> $messages
      */
     public function __construct(
         private array $messages = [],

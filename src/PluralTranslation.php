@@ -12,7 +12,7 @@ final class PluralTranslation implements TranslationContract
     ) {
     }
 
-    public function singular(string $message): PluralTranslation
+    public function singular(string $message): self
     {
         return new PluralTranslation(
             $message,
@@ -20,7 +20,7 @@ final class PluralTranslation implements TranslationContract
         );
     }
 
-    public function plural(string $message): PluralTranslation
+    public function plural(string $message): self
     {
         return new PluralTranslation(
             $this->singular,

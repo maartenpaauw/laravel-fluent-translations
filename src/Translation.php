@@ -8,11 +8,11 @@ use Maartenpaauw\Translation\Count\ExactCountMessage;
 use Maartenpaauw\Translation\Count\FromCountMessage;
 use Maartenpaauw\Translation\Count\InRangeMessage;
 
-class Translation
+final class Translation
 {
     public static function singular(string $message): PluralTranslation
     {
-        return new PluralTranslation($message);
+        return new PluralTranslation($message, '');
     }
 
     public static function plural(string $message): PluralTranslation

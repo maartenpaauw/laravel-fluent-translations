@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Maartenpaauw\Translation;
 
-class PluralTranslation implements TranslationContract
+final class PluralTranslation implements TranslationContract
 {
     public function __construct(
-        private string $singular = '',
-        private string $plural = '',
+        private string $singular,
+        private string $plural,
     ) {
     }
 
